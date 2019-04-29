@@ -30,6 +30,8 @@ public class ZipSlip {
         
         sanitizeAgainstZipFlipVulnerability(e.getName(), canonicalDestPath, canonicalDirPath);
 
+        e = entries.nextElement(); // Sensitive
+
         extractFile(input, outputDir, e.getName());
       }
     }
