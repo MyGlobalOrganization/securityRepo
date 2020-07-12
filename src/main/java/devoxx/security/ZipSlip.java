@@ -22,6 +22,7 @@ public class ZipSlip {
       Enumeration<? extends ZipEntry> entries = zipFile.entries();
       while (entries.hasMoreElements()) {
         ZipEntry e = entries.nextElement(); // Sensitive
+        entries.nextElement();
         File f = new File(outputDir, e.getName());
         InputStream input = zipFile.getInputStream(e);
 
